@@ -75,10 +75,3 @@ class DATAPREPROCESSING:
         self.TrainClean = self.Train.drop(axis=1,columns=remove)
         return self.TrainClean
         
-        
-
-obj = DATAPREPROCESSING("Train_Beneficiarydata-1542865627584.csv", "Test_Inpatientdata-1542969243754.csv"
-                        ,"Train_Outpatientdata-1542865627584.csv", "Train-1542865627584.csv")
-
-
-Dataset = obj.Processing()
