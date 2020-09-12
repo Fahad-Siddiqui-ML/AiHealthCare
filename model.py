@@ -48,7 +48,7 @@ X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 #%%
 # Section for PCA
-pca = PCA(n_components = 4)
+pca = PCA(n_components = None)
 X_train = pca.fit_transform(X_train)
 X_test = pca.transform(X_test)
 explained_veriance = pca.explained_variance_ratio_
@@ -81,6 +81,8 @@ y_pred = classifier.predict(X_test)
 from sklearn.metrics import confusion_matrix, classification_report
 CM = confusion_matrix(y_test, y_pred)
 print("ACC: {0}".format((CM[0][0]+CM[1][1])/len(X_test)))
+
+
 
 
 
